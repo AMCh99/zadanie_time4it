@@ -2,6 +2,7 @@ import { Injectable, Inject } from '@nestjs/common';
 import { ClientKafka } from '@nestjs/microservices';
 import { UserDto } from './dto/user.dto';
 import { CreateUserDto } from './dto/create-user.dto';
+import { NOTIFICATION_SERVICE } from '../../../libs/common/src/constants';
 
 @Injectable()
 export class UsersServiceService {
@@ -11,7 +12,7 @@ export class UsersServiceService {
   ];
 
   constructor(
-    @Inject('NOTIFICATION_SERVICE') private readonly client: ClientKafka,
+    @Inject(NOTIFICATION_SERVICE) private readonly client: ClientKafka,
   ) {}
 
   async onModuleInit() {
@@ -29,7 +30,10 @@ export class UsersServiceService {
       id: this.users.length + 1,
     };
     this.users.push(newUser);
-    this.client.emit('user.created', { name: newUser.name, email: newUser.email });
+    this.client.emit('user.created', {
+      name: newUser.name,
+      email: newUser.email,
+    });
     return newUser;
   }
 }
