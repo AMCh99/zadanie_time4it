@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/task-api-gateway/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/task-api-gateway/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/task-api-gateway",
+  "projects": {
+    "notification-service": {
+      "type": "application",
+      "root": "apps/notification-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/notification-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/notification-service/tsconfig.app.json"
+      }
+    },
+    "task-api-gateway": {
+      "type": "application",
+      "root": "apps/task-api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/task-api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/task-api-gateway/tsconfig.app.json"
+      }
+    },
+    "users-service": {
+      "type": "application",
+      "root": "apps/users-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/users-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users-service/tsconfig.app.json"
+      }
+    }
+  }
+}
