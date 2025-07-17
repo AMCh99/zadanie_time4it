@@ -23,7 +23,7 @@ Projekt składa się z dwóch głównych części: backendu (`task_t4it_backend`
    ```sh
    docker-compose up --build
    ```
-   Spowoduje to uruchomienie wszystkich mikroserwisów w osobnych kontenerach.
+   Spowoduje to uruchomienie wszystkich mikroserwisów w osobnych kontenerach. Uruchomienie zajmuje ok 1:30 min
 
 2. **Frontend**  
    Przejdź do katalogu `task_t4it_frontend` i uruchom:
