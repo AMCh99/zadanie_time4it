@@ -3,3 +3,4 @@ export const USERS_SERVICE = 'USERS_SERVICE';
 export const API_GATEWAY_PORT = 3000;
 export const USERS_SERVICE_PORT = 3001;
 export const NOTIFICATION_SERVICE_PORT = 3002;
+export const KAFKA_BROKER = 'kafka:9092';

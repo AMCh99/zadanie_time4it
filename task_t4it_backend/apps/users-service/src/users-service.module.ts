@@ -2,7 +2,10 @@ import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { UsersServiceController } from './users-service.controller';
 import { UsersServiceService } from './users-service.service';
-import { NOTIFICATION_SERVICE } from '../../../libs/common/src/constants';
+import {
+  KAFKA_BROKER,
+  NOTIFICATION_SERVICE,
+} from '../../../libs/common/src/constants';
 
 @Module({
   imports: [
@@ -12,7 +15,7 @@ import { NOTIFICATION_SERVICE } from '../../../libs/common/src/constants';
         transport: Transport.KAFKA,
         options: {
           client: {
-            brokers: ['kafka:9092'],
+            brokers: [KAFKA_BROKER],
           },
           consumer: {
             groupId: 'users-consumer',
