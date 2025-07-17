@@ -5,9 +5,9 @@
 Projekt składa się z dwóch głównych części: backendu (`task_t4it_backend`) oraz frontendowej aplikacji (`task_t4it_frontend`).
 
 ### Backend (`task_t4it_backend`)
-- **users-service** – mikroserwis odpowiedzialny za zarządzanie użytkownikami (dodawanie, pobieranie).
+- **users-service** – mikroserwis odpowiedzialny za zarządzanie użytkownikami (dodawanie, pobieranie). Utworzenie usera wysyła event 'user.created' przez Kafka
 - **task-api-gateway** – API Gateway, który pośredniczy w komunikacji między frontendem a mikroserwisami.
-- **notification-service** – serwis logujący powiadomienia o utworzeniu nowego użytkownika.
+- **notification-service** – serwis logujący powiadomienia o utworzeniu nowego użytkownika. 
 - Serwisy są dockerowane i uruchamiane przez `docker-compose.yml`.
 
 ### Frontend (`task_t4it_frontend`)
