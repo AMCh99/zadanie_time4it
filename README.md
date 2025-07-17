@@ -14,6 +14,7 @@ Projekt składa się z dwóch głównych części: backendu (`task_t4it_backend`
 - Prosta aplikacja w Next.js.
 - Strona główna zawiera formularz (imię, email).
 - Po wysłaniu formularza dane trafiają do backendu (`POST /users`).
+- Przycisk `Get Users` pokazuje wszystkich dodanych userów.
 
 ## Jak uruchomić?
 
@@ -31,8 +32,3 @@ Projekt składa się z dwóch głównych części: backendu (`task_t4it_backend`
    npm run dev
    ```
    Aplikacja frontendowa będzie dostępna pod `http://localhost:3003`.
-
-
----
-
-W razie pytań lub potrzeby uruchomienia całości – napisz!
