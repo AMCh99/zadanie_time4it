@@ -23,9 +23,16 @@ Projekt składa się z dwóch głównych części: backendu (`task_t4it_backend`
    ```sh
    docker-compose up --build
    ```
-   Spowoduje to uruchomienie wszystkich mikroserwisów w osobnych kontenerach. Uruchomienie zajmuje ok 1:30 min
+   Spowoduje to uruchomienie wszystkich mikroserwisów w osobnych kontenerach.
 
-2. **Frontend**  
+   Uruchomienie zajmuje ok 1:30 min, czekaj na coś takiego:
+
+   ```sh
+   notification-service-1  | [Nest] 1  - 07/18/2025, 12:25:16 AM     LOG [NestMicroservice] Nest microservice successfully started +3ms
+   users-service-1         | [Nest] 1  - 07/18/2025, 12:25:16 AM     LOG [NestMicroservice] Nest microservice successfully started +17ms
+   ```
+
+3. **Frontend**  
    Przejdź do katalogu `task_t4it_frontend` i uruchom:
    ```sh
    npm install
